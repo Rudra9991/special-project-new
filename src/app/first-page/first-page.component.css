@@ -1,0 +1,30 @@
+.firstDiv{
+    background-color: yellow;
+    height:  100vh;
+    
+    text-align: center;
+    vertical-align:middle;
+    align-content: center;  
+}
+
+
+
+.firstimg {
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease, visibility 0s ease 0.3s;
+}
+
+#firsbtndiv:hover ~ #firstimgdiv .firstimg {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.3s ease;  /* Smooth fade-in */
+}
+
+.firsbtn:hover{
+    background-color: red;
+    transition: background-color 3s;
+    transition: transform 1s;
+    transform: scale(2); 
+    border-radius: 2px;
+}

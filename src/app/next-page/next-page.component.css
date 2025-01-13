@@ -1,0 +1,71 @@
+body,html {
+    margin: 0;
+    height: 100vh;
+    align-items: center; 
+    display: flex;
+    justify-content: center;
+    overflow: hidden; /* Prevents scrollbars while animating */
+    
+  }
+
+ .couple{
+    height: 100vh;
+    align-content: center;
+    display: flex;
+    justify-content: center;
+ }
+  /* Positioning the container for the image */
+  .floating-image-container {
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%); /* Center the image horizontally */
+  }
+  
+  /* Styling the image and adding the animation */
+  .floating-image {
+    width: 100px; /* Adjust the size of your image */
+    height: auto;
+    opacity: 20%;
+    animation: floatUp 5s ease-in-out infinite; /* The animation */
+  }
+  .floating-image1 {
+    width: 100px; /* Adjust the size of your image */
+    height: auto;
+    opacity: 1;
+    transform: translateY(-40%);
+    animation: floatDown 5s ease-in-out infinite; /* The animation */
+  }
+
+  @keyframes floatDown {
+    from{
+        
+        transform: translateX(0px);
+    }
+    to{
+        
+        transform: translateX(100px);
+    }
+    from{
+      transform: translateY(-600px);
+    
+  to{
+      transform: translateY(0px);   
+  }}
+}
+
+  /* The keyframe animation that moves the image from bottom to top */
+  @keyframes floatUp {
+    from{
+        transform: translateY(0px);
+    }
+    to{
+        transform: translateY(-600px);
+    }
+    from{
+      transform: translateX(-60px);
+  
+  to{
+      transform: translateX(-600px);
+  }}
+  }
